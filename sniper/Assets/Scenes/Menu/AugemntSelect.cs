@@ -22,6 +22,7 @@ public class AugemntSelect : MonoBehaviour
             }
             else
             {
+                Debug.Log("no money");
                 //U dont got enough money
             }
         }
