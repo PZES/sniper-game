@@ -9,13 +9,14 @@ public class coinamount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(PlayerPrefs.HasKey("money").ToString());
-        textelement.text = PlayerPrefs.GetInt("money").ToString();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        textelement.text = PlayerPrefs.GetInt("money").ToString();
+   
+        
     }
 }

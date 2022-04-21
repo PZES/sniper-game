@@ -10,7 +10,7 @@ public class Menu : MonoBehaviour
         PlayerPrefs.SetInt("scope", 0);
         PlayerPrefs.SetInt("supressor", 0);
         PlayerPrefs.SetInt("stock", 0);
-        PlayerPrefs.SetInt("money", 10);
+        PlayerPrefs.SetInt("money", 0);
         PlayerPrefs.SetInt("level", 1);
         PlayerPrefs.SetInt("gun", 1);
         PlayerPrefs.Save();
