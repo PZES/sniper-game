@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class GunSelect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void SetGun1()
     {
-        
+        PlayerPrefs.SetInt("gun", 1);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SetGun2()
     {
-        
+        PlayerPrefs.SetInt("gun", 2);
+    }
+    public void SetGun3()
+    {
+        PlayerPrefs.SetInt("gun", 3);
     }
 }

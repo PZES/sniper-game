@@ -10,11 +10,27 @@ public class LevelSelect : MonoBehaviour
         SceneManager.LoadScene(1);
     }
     public void Level2()
-    {   
-        SceneManager.LoadScene(2);
+    {
+        if (PlayerPrefs.GetInt("level") >= 2)
+        {
+            SceneManager.LoadScene(2);
+        }
+        else
+        {
+            //U have not completed previous levels 
+        }
+        
     }
     public void Level3()
     {
-        SceneManager.LoadScene(3);
+        if (PlayerPrefs.GetInt("level") >= 3)
+        {
+            SceneManager.LoadScene(3);
+        }
+        else
+        {
+            //U have not completed previous levels
+        }
+        
     }
 }
