@@ -12,6 +12,7 @@ public class InputManager : MonoBehaviour
     public AudioSource shoot1;
     public AudioSource shoot2;
     public AudioSource shoot3;
+    public GameObject pauseMenuUI;
     // Scoped Variables
     private bool isScoped = false;
     Animator animator;
@@ -83,6 +84,13 @@ public class InputManager : MonoBehaviour
                     shoot3.Play();
                     break;
             }
+        }
+
+        if (onFoot.Pause.triggered)
+        {
+            Debug.Log("paused");
+            pauseMenuUI.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
