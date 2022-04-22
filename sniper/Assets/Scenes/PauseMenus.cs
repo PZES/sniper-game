@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class PauseMenus : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public GameObject pauseMenuUI;
+    private PlayerInput playerInput;
+    private PlayerInput.OnFootActions onFoot;
 
     public void Start()
     {
+        playerInput = new PlayerInput();
+        onFoot = playerInput.OnFoot;
         //pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
     public void Resume()
@@ -34,8 +39,11 @@ public class PauseMenus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameObject.Find("PauseMenu") != null)
+        Debug.Log("test");
+        if(onFoot.Pause.triggered)
         {
+            Debug.Log("triggered");
+            pauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
         }
     }
