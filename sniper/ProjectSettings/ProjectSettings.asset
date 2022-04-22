@@ -152,7 +152,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Android: com.DefaultCompany.sniper
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -783,7 +784,7 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 0
+  activeInputHandler: 2
   cloudProjectId: 76c3fd83-9a77-4043-af19-13546c4e4878
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
