@@ -953,6 +953,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4753781437983401496, guid: 1a4069709619d434dbb74dff01bdc84b,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e7632c6401c09437e83de45d33c5858e, type: 3}
     - target: {fileID: 4836885574474558442, guid: 1a4069709619d434dbb74dff01bdc84b,
         type: 3}
       propertyPath: m_IsActive
@@ -1038,6 +1043,11 @@ PrefabInstance:
       propertyPath: shoot3
       value: 
       objectReference: {fileID: 1320357570}
+    - target: {fileID: 6236152083330568073, guid: 1a4069709619d434dbb74dff01bdc84b,
+        type: 3}
+      propertyPath: audiotest
+      value: 
+      objectReference: {fileID: 1320357571}
     - target: {fileID: 6236152083330568073, guid: 1a4069709619d434dbb74dff01bdc84b,
         type: 3}
       propertyPath: pauseMenuUI
@@ -1198,6 +1208,12 @@ PrefabInstance:
 --- !u!82 &1320357570 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 8215152145115849066, guid: 1a4069709619d434dbb74dff01bdc84b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1320357569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1320357571 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4753781437983401496, guid: 1a4069709619d434dbb74dff01bdc84b,
     type: 3}
   m_PrefabInstance: {fileID: 1320357569}
   m_PrefabAsset: {fileID: 0}

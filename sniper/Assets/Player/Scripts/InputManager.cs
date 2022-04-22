@@ -12,6 +12,8 @@ public class InputManager : MonoBehaviour
     public AudioSource shoot1;
     public AudioSource shoot2;
     public AudioSource shoot3;
+    public AudioSource audiotest;
+
     public GameObject pauseMenuUI;
     // Scoped Variables
     private bool isScoped = false;
@@ -42,12 +44,16 @@ public class InputManager : MonoBehaviour
     }
     private void Start()
     {
-        shoot1 = GetComponent<AudioSource>();
-        shoot1.Play();
+        
+        
+        audiotest = GetComponent<AudioSource>();
+        audiotest.Play();
         shoot2 = GetComponent<AudioSource>();
-        shoot2.Play();
+        //shoot2.Play();
         shoot3 = GetComponent<AudioSource>();
-        shoot3.Play();
+        //shoot3.Play();
+        shoot1 = GetComponent<AudioSource>();
+        //shoot1.Play();
     }
     void Update()
     {
