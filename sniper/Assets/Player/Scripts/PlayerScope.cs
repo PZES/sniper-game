@@ -5,21 +5,33 @@ using UnityEngine.InputSystem;
 
 public class PlayerScope : MonoBehaviour
 {
-    public Animator animator;
-    //GameObject weaponHolder = GameObject.Find("weaponHolder");
-    
 
-    private bool isScoped = false;
-
-    public void ProcessScope(bool input)
+    public GameObject gun1;
+    public GameObject gun2;
+    public GameObject gun3;
+    void Start()
     {
-        //animator = weaponHolder.GetComponent<Animator>();
-        Debug.Log("flag1");
-        if (input)
+        int gun = PlayerPrefs.GetInt("gun");
+        switch (gun)
         {
-            Debug.Log("flag2");
-            isScoped = !isScoped;
-            animator.SetBool("Scoped", !isScoped);
+            case 1:
+                Debug.Log("1");
+                gun1.SetActive(true);
+                gun2.SetActive(false);
+                gun3.SetActive(false);
+                break;
+            case 2:
+                Debug.Log("2");
+                gun1.SetActive(false);
+                gun2.SetActive(true);
+                gun3.SetActive(false);
+                break;
+            case 3:
+                Debug.Log("3");
+                gun1.SetActive(false);
+                gun2.SetActive(false);
+                gun3.SetActive(true);
+                break;
         }
     }
 }

@@ -9,7 +9,9 @@ public class InputManager : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerInput.OnFootActions onFoot;
     private PlayerLook look;
-
+    public AudioSource shoot1;
+    public AudioSource shoot2;
+    public AudioSource shoot3;
     // Scoped Variables
     private bool isScoped = false;
     Animator animator;
@@ -29,8 +31,7 @@ public class InputManager : MonoBehaviour
         playerInput = new PlayerInput();
         onFoot = playerInput.OnFoot;
         look = GetComponent<PlayerLook>();
-
-
+        
         // Declare GO's for use of Scope action
         weaponHolder = GameObject.Find("weaponHolder");
         scopeView = GameObject.Find("ScopeView2");
@@ -38,7 +39,15 @@ public class InputManager : MonoBehaviour
         animator = weaponHolder.GetComponent<Animator>();
         
     }
-
+    private void Start()
+    {
+        shoot1 = GetComponent<AudioSource>();
+        shoot1.Play();
+        shoot2 = GetComponent<AudioSource>();
+        shoot2.Play();
+        shoot3 = GetComponent<AudioSource>();
+        shoot3.Play();
+    }
     void Update()
     {
         // Scope Function
@@ -54,6 +63,27 @@ public class InputManager : MonoBehaviour
                 StartCoroutine(OnScoped());
             else
                 OnUnscoped();
+        }
+        Debug.Log(onFoot.Shoot.triggered);
+        if (onFoot.Shoot.triggered)
+        {
+            Debug.Log("triggered");
+            int gun = PlayerPrefs.GetInt("gun");
+            switch (gun)
+            {
+                case 1:
+                    Debug.Log("1");
+                    shoot1.Play();
+                    break;
+                case 2:
+                    Debug.Log("2");
+                    shoot2.Play();
+                    break;
+                case 3:
+                    Debug.Log("3");
+                    shoot3.Play();
+                    break;
+            }
         }
     }
 

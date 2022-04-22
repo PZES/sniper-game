@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public new GameObject pauseMenuUI;
+    public GameObject pauseMenuUI;
 
     public void Start()
     {
