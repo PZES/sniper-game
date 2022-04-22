@@ -17,4 +17,9 @@ public class Settings : MonoBehaviour
         }
         
     }
+    public void resetgame()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+    }
 }

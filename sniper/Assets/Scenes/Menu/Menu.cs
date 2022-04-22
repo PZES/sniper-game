@@ -17,7 +17,7 @@ public class Menu : MonoBehaviour
             PlayerPrefs.SetInt("gun", 1);
             
         }
-        //PlayerPrefs.DeleteAll();
+        
         PlayerPrefs.Save();
     }
     public void Quit()

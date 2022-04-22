@@ -5,6 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelect : MonoBehaviour
 {
+
+    public GameObject greyout2;
+    public GameObject greyout3;
+    private void Update()
+    {
+        int level = PlayerPrefs.GetInt("level");
+        switch (level)
+        {
+            case 1:
+                greyout2.SetActive(true);
+                greyout3.SetActive(true);
+                break;
+            case 2:
+                greyout2.SetActive(false);
+                greyout3.SetActive(true);
+                break;
+            case 3:
+                greyout2.SetActive(false);
+                greyout3.SetActive(false);
+                break;
+        }
+    }
     public void Level1()
     {
         SceneManager.LoadScene(1);
