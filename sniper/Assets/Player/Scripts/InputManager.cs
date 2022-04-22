@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour
     public AudioSource shoot2;
     public AudioSource shoot3;
     public AudioSource audiotest;
+    public Camera fpsCam;
 
     public GameObject pauseMenuUI;
     // Scoped Variables
@@ -73,20 +74,22 @@ public class InputManager : MonoBehaviour
         }
         if (onFoot.Shoot.triggered)
         {
-            Debug.Log("triggered");
+            //Debug.Log("triggered");
+            shoot();
+            
             int gun = PlayerPrefs.GetInt("gun");
             switch (gun)
             {
                 case 1:
-                    Debug.Log("1");
+                    //Debug.Log("1");
                     shoot1.Play();
                     break;
                 case 2:
-                    Debug.Log("2");
+                    //Debug.Log("2");
                     shoot2.Play();
                     break;
                 case 3:
-                    Debug.Log("3");
+                    //Debug.Log("3");
                     shoot3.Play();
                     break;
             }
@@ -99,6 +102,15 @@ public class InputManager : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
+    void shoot()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
+        {
+            Debug.Log(hit.transform.name);
+        }
+    }
+
 
     void OnUnscoped()
     {
@@ -137,19 +149,64 @@ public class InputManager : MonoBehaviour
         scopeView.SetActive(true);
         weaponHolder.SetActive(false);
         int scopeLevel = PlayerPrefs.GetInt("scope");
+        int gun = PlayerPrefs.GetInt("gun");
         switch (scopeLevel)
         {
             case 0:
-                Camera.main.fieldOfView = zoomPOV0;
+                if (gun == 1)
+                {
+                    Camera.main.fieldOfView = 50f;
+                }else if(gun == 2)
+                {
+                    Camera.main.fieldOfView = 40f;
+                }
+                else
+                {
+                    Camera.main.fieldOfView = 55f;
+                }
+                
                 break;
             case 1:
-                Camera.main.fieldOfView = zoomPOV1;
+                if (gun == 1)
+                {
+                    Camera.main.fieldOfView = 40f;
+                }
+                else if (gun == 2)
+                {
+                    Camera.main.fieldOfView = 30f;
+                }
+                else
+                {
+                    Camera.main.fieldOfView = 50f;
+                }
                 break;
             case 2:
-                Camera.main.fieldOfView = zoomPOV2;
+                if (gun == 1)
+                {
+                    Camera.main.fieldOfView = 30f;
+                }
+                else if (gun == 2)
+                {
+                    Camera.main.fieldOfView = 20f;
+                }
+                else
+                {
+                    Camera.main.fieldOfView = 40f;
+                }
                 break;
             case 3:
-                Camera.main.fieldOfView = zoomPOV3;
+                if (gun == 1)
+                {
+                    Camera.main.fieldOfView = 20f;
+                }
+                else if (gun == 2)
+                {
+                    Camera.main.fieldOfView = 10f;
+                }
+                else
+                {
+                    Camera.main.fieldOfView = 30f;
+                }
                 break;
 
 
