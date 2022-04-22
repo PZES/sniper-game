@@ -14,9 +14,13 @@ public class Menu : MonoBehaviour
         PlayerPrefs.SetInt("level", 1);
         PlayerPrefs.SetInt("gun", 1);
         PlayerPrefs.Save();
-        Debug.Log("Menu");
+        //Debug.Log("Menu");
     }
-
+    public void Quit()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
+    }
     // Update is called once per frame
     void Update()
     {
