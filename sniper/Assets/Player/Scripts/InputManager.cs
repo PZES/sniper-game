@@ -64,7 +64,6 @@ public class InputManager : MonoBehaviour
             else
                 OnUnscoped();
         }
-        Debug.Log(onFoot.Shoot.triggered);
         if (onFoot.Shoot.triggered)
         {
             Debug.Log("triggered");
