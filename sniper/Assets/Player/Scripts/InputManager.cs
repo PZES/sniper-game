@@ -26,6 +26,10 @@ public class InputManager : MonoBehaviour
     private int tokens = 0;
     const float zoomPOV0 = 50f, zoomPOV1 = 40f, zoomPOV2 = 20f, zoomPOV3 = 10f, normalPOV = 60f;
     public float enemyDamage = 100f;
+    private int i = 1;
+    public GameObject zombie1;
+    public GameObject zombie2;
+    public GameObject zombie3;
     void Awake()
     {
         Time.timeScale = 0f;
@@ -58,12 +62,14 @@ public class InputManager : MonoBehaviour
         //shoot3.Play();
         shoot1 = GetComponent<AudioSource>();
         //shoot1.Play();
+
     }
     void Update()
     {
         // Scope Function
-        if(zom >= 3)
+        if(zom >= 3 && i == 1)
         {
+            i = 2;
             pauseMenu.GetComponent<PauseMenus>().Win(tokens);
         }
         if (onFoot.Scope.triggered)
@@ -118,8 +124,8 @@ public class InputManager : MonoBehaviour
             Debug.Log(hit.transform.tag);
             if(hit.transform.tag == "Head")
             {
-                EnemyHealth health = hit.transform.GetComponent<EnemyHealth>();
-                health.DeductHealth(enemyDamage);
+                EnemyHealth health = hit.transform.GetComponentInParent<EnemyHealth>();
+                health.EnemyDead();
                 tokens += 3;
                 Debug.Log(tokens);
                 zom++;
@@ -132,7 +138,8 @@ public class InputManager : MonoBehaviour
                 zom++;
             }else if (hit.transform.tag == "ShootZone")
             {
-                //zombie.GetComponent<EnemyAI>().OnAware();
+                EnemyAI health = hit.transform.GetComponentInParent<EnemyAI>();
+                health.OnAware();
             }
         }
     }

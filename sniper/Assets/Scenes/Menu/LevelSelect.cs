@@ -34,6 +34,12 @@ public class LevelSelect : MonoBehaviour
                 lock2.SetActive(false);
                 lock3.SetActive(false);
                 break;
+            default:
+                greyout2.SetActive(true);
+                greyout3.SetActive(true);
+                lock2.SetActive(true);
+                lock3.SetActive(true);
+                break;
         }
     }
     public void Level1()

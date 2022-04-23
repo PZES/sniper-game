@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
 
 
     public float enemyHealth = 100f;
-
+    public bool isAware = false;
     public void DeductHealth(float deductHealth)
     {
         enemyHealth -= deductHealth;
@@ -21,6 +21,12 @@ public class EnemyHealth : MonoBehaviour
     public void EnemyDead()
     {
         Destroy(gameObject);
+    }
+    public void OnAware()
+    {
+        isAware = true;
+
+
     }
     // Start is called before the first frame update
     void Start()
