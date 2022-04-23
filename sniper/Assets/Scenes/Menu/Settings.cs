@@ -20,6 +20,12 @@ public class Settings : MonoBehaviour
     public void resetgame()
     {
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("scope", 0);
+        PlayerPrefs.SetInt("supressor", 0);
+        PlayerPrefs.SetInt("stock", 0);
+        PlayerPrefs.SetInt("money", 0);
+        PlayerPrefs.SetInt("level", 1);
+        PlayerPrefs.SetInt("gun", 1);
         PlayerPrefs.Save();
     }
 }
