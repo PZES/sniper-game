@@ -25,7 +25,7 @@ public class InputManager : MonoBehaviour
     private int zom =0;
     private int tokens = 0;
     const float zoomPOV0 = 50f, zoomPOV1 = 40f, zoomPOV2 = 20f, zoomPOV3 = 10f, normalPOV = 60f;
-
+    public float enemyDamage = 100f;
     void Awake()
     {
         Time.timeScale = 0f;
@@ -119,14 +119,14 @@ public class InputManager : MonoBehaviour
             if(hit.transform.tag == "Head")
             {
                 EnemyHealth health = hit.transform.GetComponent<EnemyHealth>();
-                health.EnemyDead();
+                health.DeductHealth(enemyDamage);
                 tokens += 3;
                 Debug.Log(tokens);
                 zom++;
             }else if (hit.transform.tag == "Zombie")
             {
                 EnemyHealth health = hit.transform.GetComponent<EnemyHealth>();
-                health.EnemyDead();
+                health.DeductHealth(enemyDamage);
                 tokens += 2;
                 Debug.Log(tokens);
                 zom++;

@@ -37,6 +37,7 @@ public class PauseMenus : MonoBehaviour
         winUI.SetActive(true);
         int level = PlayerPrefs.GetInt("level")+1;
         points += PlayerPrefs.GetInt("money");
+        Debug.Log(points);
         PlayerPrefs.SetInt("level", level);
         PlayerPrefs.SetInt("money", points);
         PlayerPrefs.Save();

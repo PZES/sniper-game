@@ -6,7 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
 
 
-    public float enemyHealth;
+    public float enemyHealth = 100f;
 
     public void DeductHealth(float deductHealth)
     {
