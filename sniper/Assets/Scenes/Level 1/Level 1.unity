@@ -1328,6 +1328,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 564954445781973419, guid: 1a4069709619d434dbb74dff01bdc84b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300801408179395755, guid: 1a4069709619d434dbb74dff01bdc84b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753781437983401496, guid: 1a4069709619d434dbb74dff01bdc84b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6079343252982285682, guid: 1a4069709619d434dbb74dff01bdc84b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6236152083330568074, guid: 1a4069709619d434dbb74dff01bdc84b,
         type: 3}
       propertyPath: m_Name
@@ -1388,6 +1408,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6330986039881223125, guid: 1a4069709619d434dbb74dff01bdc84b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144184050802226420, guid: 1a4069709619d434dbb74dff01bdc84b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7266718686103311574, guid: 1a4069709619d434dbb74dff01bdc84b,
         type: 3}
       propertyPath: zombie
@@ -1418,6 +1448,11 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 935307132}
+    - target: {fileID: 8215152145115849066, guid: 1a4069709619d434dbb74dff01bdc84b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a4069709619d434dbb74dff01bdc84b, type: 3}
 --- !u!1 &1322992094
