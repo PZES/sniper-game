@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -183,28 +183,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
---- !u!1 &397204729 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1897517984819386304, guid: 53a47bc3d36863144a79415570f271ea,
-    type: 3}
-  m_PrefabInstance: {fileID: 1680972044}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &397204730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397204729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02806b62e4a3e1a43ab613367e19776a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: 0
->>>>>>> Stashed changes
 --- !u!1 &490740843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,44 +1471,6 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[13]
       value: 
       objectReference: {fileID: 1579742543}
-<<<<<<< Updated upstream
-=======
-    - target: {fileID: 2517016022162642561, guid: 53a47bc3d36863144a79415570f271ea,
-        type: 3}
-      propertyPath: m_TagString
-      value: ShootZone
-      objectReference: {fileID: 0}
-    - target: {fileID: 3691768078548099647, guid: 53a47bc3d36863144a79415570f271ea,
-        type: 3}
-      propertyPath: m_TagString
-      value: ShootZone
-      objectReference: {fileID: 0}
-    - target: {fileID: 3742995278964501071, guid: 53a47bc3d36863144a79415570f271ea,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4675061616259592718, guid: 53a47bc3d36863144a79415570f271ea,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5003358072750498687, guid: 53a47bc3d36863144a79415570f271ea,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6157673610030691780, guid: 53a47bc3d36863144a79415570f271ea,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6858321902253111072, guid: 53a47bc3d36863144a79415570f271ea,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.01
-      objectReference: {fileID: 0}
->>>>>>> Stashed changes
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a47bc3d36863144a79415570f271ea, type: 3}
 --- !u!1 &1685636999
