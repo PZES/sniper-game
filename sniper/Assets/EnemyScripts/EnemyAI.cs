@@ -25,7 +25,8 @@ public class EnemyAI : MonoBehaviour
     
     private int waypointIndex = 0;
     private Animator animator;
-
+    public Vector3 playerpos;
+    public GameObject loss;
 
     public void Start()
     {
@@ -39,7 +40,12 @@ public class EnemyAI : MonoBehaviour
         if (isAware)
         {
             //agent.SetDestination(fpsc.transform.position);
+            agent.SetDestination(playerpos);
             agent.speed = chaseSpeed;
+            if (Vector3.Distance(transform.position, playerpos) < 1f)
+            {
+                loss.GetComponent<PauseMenus>().Lose();
+            }
             //renderer.material.color = Color.red;
         }
         else
@@ -72,6 +78,8 @@ public class EnemyAI : MonoBehaviour
     public void OnAware()
     {
         isAware = true;
+        
+        
     }
 
     public void Wander()

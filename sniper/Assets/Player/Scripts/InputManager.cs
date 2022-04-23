@@ -14,21 +14,24 @@ public class InputManager : MonoBehaviour
     public AudioSource shoot3;
     public AudioSource audiotest;
     public Camera fpsCam;
-
+    public GameObject zombie;
     public GameObject pauseMenuUI;
+    public GameObject pauseMenu;
     // Scoped Variables
     private bool isScoped = false;
     Animator animator;
     GameObject weaponHolder;
     GameObject scopeView;
-
+    private int zom =0;
+    private int tokens = 0;
     const float zoomPOV0 = 50f, zoomPOV1 = 40f, zoomPOV2 = 20f, zoomPOV3 = 10f, normalPOV = 60f;
 
     void Awake()
     {
-
+        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         // Hide Cursor (PC Testing Purposes)
-       // Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.lockState = CursorLockMode.Locked;
 
 
         // For Use by Look action
@@ -59,6 +62,10 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         // Scope Function
+        if(zom >= 3)
+        {
+            pauseMenu.GetComponent<PauseMenus>().Win(tokens);
+        }
         if (onFoot.Scope.triggered)
         {
             isScoped = !isScoped;
@@ -105,9 +112,28 @@ public class InputManager : MonoBehaviour
     void shoot()
     {
         RaycastHit hit;
+        
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
         {
-            Debug.Log(hit.transform.name);
+            Debug.Log(hit.transform.tag);
+            if(hit.transform.tag == "Head")
+            {
+                EnemyHealth health = hit.transform.GetComponent<EnemyHealth>();
+                health.EnemyDead();
+                tokens += 3;
+                Debug.Log(tokens);
+                zom++;
+            }else if (hit.transform.tag == "Zombie")
+            {
+                EnemyHealth health = hit.transform.GetComponent<EnemyHealth>();
+                health.EnemyDead();
+                tokens += 2;
+                Debug.Log(tokens);
+                zom++;
+            }else if (hit.transform.tag == "ShootZone")
+            {
+                zombie.GetComponent<EnemyAI>().OnAware();
+            }
         }
     }
 

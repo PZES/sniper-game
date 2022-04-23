@@ -18,7 +18,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void EnemyDead()
+    public void EnemyDead()
     {
         Destroy(gameObject);
     }

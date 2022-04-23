@@ -17,7 +17,7 @@ public class GunSelect : MonoBehaviour
         gun1_pic.SetActive(true);
         gun2_pic.SetActive(false);
         gun3_pic.SetActive(false);
-        Debug.Log("1");
+        //Debug.Log("1");
     }
     public void SetGun2()
     {
@@ -25,7 +25,7 @@ public class GunSelect : MonoBehaviour
         gun1_pic.SetActive(false);
         gun2_pic.SetActive(true);
         gun3_pic.SetActive(false);
-        Debug.Log("2");
+        //Debug.Log("2");
     }
     public void SetGun3()
     {
@@ -33,6 +33,6 @@ public class GunSelect : MonoBehaviour
         gun1_pic.SetActive(false);
         gun2_pic.SetActive(false);
         gun3_pic.SetActive(true);
-        Debug.Log("3");
+        //Debug.Log("3");
     }
 }
