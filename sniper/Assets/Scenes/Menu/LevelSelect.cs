@@ -14,6 +14,10 @@ public class LevelSelect : MonoBehaviour
     {
         int level = PlayerPrefs.GetInt("level");
         Debug.Log(level);
+        if(level > 3)
+        {
+            level = 3;
+        }
         switch (level)
         {
             case 1:
