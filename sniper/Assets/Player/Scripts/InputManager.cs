@@ -14,7 +14,7 @@ public class InputManager : MonoBehaviour
     public AudioSource shoot3;
     public AudioSource audiotest;
     public Camera fpsCam;
-    public GameObject zombie;
+    //public GameObject zombie;
     public GameObject pauseMenuUI;
     public GameObject pauseMenu;
     // Scoped Variables
@@ -132,7 +132,7 @@ public class InputManager : MonoBehaviour
                 zom++;
             }else if (hit.transform.tag == "ShootZone")
             {
-                zombie.GetComponent<EnemyAI>().OnAware();
+                //zombie.GetComponent<EnemyAI>().OnAware();
             }
         }
     }

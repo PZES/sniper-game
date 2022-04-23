@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897517984332930046}
   m_LocalRotation: {x: -0, y: 0.6091076, z: -0, w: 0.7930876}
-  m_LocalPosition: {x: 0.001, y: 0.815, z: -0.014}
+  m_LocalPosition: {x: 0.2, y: 0.715, z: 0}
   m_LocalScale: {x: 0.3740508, y: 0.3740508, z: 0.3740508}
   m_Children: []
   m_Father: {fileID: 1897517984819386331}
@@ -125,7 +125,7 @@ Transform:
   m_GameObject: {fileID: 1897517984819386304}
   m_LocalRotation: {x: 0, y: -0.6091076, z: 0, w: 0.7930876}
   m_LocalPosition: {x: 87.857, y: 2.858, z: 72.918}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.80699, y: 0.80699, z: 0.80699}
   m_Children:
   - {fileID: 1897517984332930045}
   - {fileID: 1897517984438388870}
@@ -204,14 +204,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897517984819386304}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f9f89617bf9ca941a621ed095132f6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fpsc: {fileID: 0}
   wanderType: 1
-  wanderSpeed: 5
+  wanderSpeed: 0.75
   chaseSpeed: 2
   fov: 120
   viewDistance: 10
@@ -229,6 +229,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playerpos: {x: 80, y: 4, z: 83}
+  loss: {fileID: 0}
 --- !u!195 &1897517984819386330
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -265,7 +269,7 @@ GameObject:
   - component: {fileID: 6157673610030691780}
   m_Layer: 7
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: ShootZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,7 +303,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2517016022162642561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -361,7 +365,7 @@ GameObject:
   - component: {fileID: 860109081467467164}
   m_Layer: 7
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: ShootZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,7 +399,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3691768078548099647}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -513,7 +517,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 03d50813cf1f91a4b984ab6950261e31, type: 2}
+      objectReference: {fileID: 9100000, guid: 7d2cce81aadef8441b66f9f9508eaca9, type: 2}
     - target: {fileID: 13700006, guid: abfe6fc5a9b390a488839c1fc3b58dcd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
